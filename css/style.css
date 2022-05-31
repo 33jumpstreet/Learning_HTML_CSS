@@ -39,7 +39,7 @@ img {
   font-weight: normal;
 }
 
-/* 버트 */
+/* 버튼 */
 .button {
   font-size: 1.375rem;
   background: #0bd;
@@ -117,7 +117,12 @@ img {
 
 /* 기사부분 */
 article {
-  width: 74%;
+  width: 60%;
+  order: 2;
+}
+
+ad {
+  order: 1;
 }
 .post-info {
   position: relative;
@@ -162,6 +167,7 @@ article p {
 /* 사이드바 */
 aside {
   width: 22%;
+  order: 3;
 }
 aside p {
   padding: 12px 10px;
@@ -193,7 +199,6 @@ footer p {
   font-size: 0.875rem;
 }
 
-
 /* 미디어쿼리 - 모바일 버전*/
 @media (max-width: 600px) {
   .page-title {
@@ -214,5 +219,40 @@ footer p {
   /* HOME */
   .home-content {
     margin-top: 20%;
+  }
+  /* news */
+  .news-contents {
+    flex-direction: column;
+  }
+  article, aside {
+    width: 100%;
+  }
+  #news .page-title {
+    margin-top: 30px;
+  }
+  aside {
+    margin-top: 60px;
+  }
+  .post-info {
+    margin-bottom: 30px;
+  }
+  .post-date {
+    width: 70px;
+    height: 70px;
+    font-size: 1rem;
+  }
+  .post-date span {
+    font-size: 0.875rem;
+    padding-top: 2px;
+  }
+  .post-title {
+    font-size: 1.375rem;
+  }
+  .post-cat {
+    font-size: 0.875rem;
+    margin-top: 10px;
+  }
+  .post-title, .post-cat {
+    margin-left: 80px;
   }
 }
